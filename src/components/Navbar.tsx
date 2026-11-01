@@ -7,7 +7,7 @@ export default function Navbar() {
                 <h1 className={"text-lg hover:cursor-default"}>Outdoor Walking Club</h1>
             </div>
             <div className="flex flex-row justify-between w-[15rem] px-4">
-                <NavbarPage pageName={"Home"} href={""}/>
+                <NavbarPage pageName={"Home"} href={"/"}/>
                 <NavbarPage pageName={"About"} href={"about"}/>
                 <NavbarPage pageName={"Blog"} href={"blog"}/>
                 <NavbarPage pageName={"Events"} href={"events"}/>

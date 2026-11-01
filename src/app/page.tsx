@@ -6,12 +6,13 @@ import img3 from "@/images/IMG_1513.jpeg"
 import img4 from "@/images/IMG_1518.jpeg"
 import img5 from "@/images/IMG_1532.jpeg"
 import ImageCarousel from "@/components/ImageCarousel";
+import Footer from "@/components/Footer";
 
 
 
 export default function Home() {
     return (
-        <div className={"flex flex-col items-center"}>
+        <div className={"flex flex-col items-center min-h-full"}>
             <Navbar/>
             <div className={"flex-col mt-[6rem]"}>
                 <div className={"h-[36rem] w-full grid grid-cols-1 grid-rows-1"}>
