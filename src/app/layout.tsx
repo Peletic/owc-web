@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {Alata, Geist_Mono} from "next/font/google";
+import {Alata} from "next/font/google";
 import "./globals.css";
 
 const alata = Alata({

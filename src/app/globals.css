@@ -3,7 +3,6 @@
 :root {
     --background: #ffffff;
     --foreground: #171717;
-
 }
 
 @theme inline {
@@ -23,20 +22,11 @@
     --animate-slide: slideRight 60s linear infinite;
 }
 @utility pause-animation {
-        animation-play-state: paused;
-    }
-    @utility play-animation {
-        animation-play-state: running;
-    }
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    animation-play-state: paused;
 }
-*/
-
+@utility play-animation {
+    animation-play-state: running;
+}
 
 body {
     background: var(--background);

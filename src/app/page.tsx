@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
 import homeBg from "@/images/IMG_1506.jpeg"
 import img1 from "@/images/IMG_1501.jpeg"
 import img2 from "@/images/IMG_1511.jpeg"
