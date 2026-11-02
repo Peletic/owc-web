@@ -11,12 +11,16 @@ export class BlogPost {
     date: number;
     description: string;
     contents: string;
+    id: string;
+    thumbnail: string;
 
-    constructor({title, date, description, contents}: {title: string, date: number, description: string, contents: string}) {
+    constructor({title, date, description, contents, id, thumbnail}: {title: string, date: number, description: string, contents: string, id: string, thumbnail: string}) {
         this.title = title;
         this.date = date;
         this.description = description;
         this.contents = contents;
+        this.id = id;
+        this.thumbnail = thumbnail;
     }
 
     // Let's go with JSON-ifying it for now.
