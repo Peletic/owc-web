@@ -13,7 +13,7 @@ export default function BlogEntry({post, className}: { post: BlogPost, className
             <div
                 className={"w-[16rem] h-[10rem] bg-background text-lg flex flex-col items-start px-[1rem] py-[1rem] gap-2"}>
                 <div className={"w-max h-max bg-foreground/40 p-[0.5rem] rounded text-sm hover:cursor-default"}>
-                    <span>{`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}</span>
+                    <span>{`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}</span>
                 </div>
                 <div className={"w-[14rem] h-max"}>
                     <a href={href}>{post.title}</a>
