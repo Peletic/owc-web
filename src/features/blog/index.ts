@@ -1,3 +1,5 @@
+import path from "node:path";
+
 type NonMethodEntries<T> = {
     [K in keyof T]: T[K] extends Function ? never : K;
 }[keyof T];
@@ -35,3 +37,5 @@ export class BlogPost {
         return new BlogPost(transformed)
     }
 }
+
+export const BLOG_DIR_PATH = path.join(process.cwd(), "blog")

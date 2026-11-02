@@ -1,6 +1,12 @@
+'use server'
 import Navbar from "@/components/Navbar";
+import * as fs from "node:fs";
+import path from "node:path";
 
-export default function BlogPost() {
+export default async function BlogPost({params}: { params: Promise<{ id: string }> }) {
+    const {id} = await params
+    const file = fs.readFileSync(path.join(process.cwd(), "blog", `${id}.json`)).toString();
+
     return (
         <div className={"flex flex-col items-center min-h-full"}>
             <Navbar/>
