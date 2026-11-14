@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import * as fs from "node:fs";
 import path from "node:path";
 import {BlogPost} from "@/features/blog";
+import { MDXRemote } from "next-mdx-remote-client/rsc";
+
 
 export default async function Post({params}: { params: Promise<{ id: string }> }) {
     const {id} = await params
@@ -11,11 +13,18 @@ export default async function Post({params}: { params: Promise<{ id: string }> }
     return (
         <div className={"flex flex-col items-center min-h-full"}>
             <Navbar/>
-            <div className={"flex mt-[6rem] h-[6rem] max-w-[64rem] w-3/5 drop-shadow items-center"}>
-                <h1 className={"text-6xl font-bold text-foreground"}>
+            <div className={"flex mt-[6rem] h-[6rem] max-w-[64rem] w-3/5 items-center"}>
+                <h1 className={"text-6xl font-bold text-foreground drop-shadow"}>
                     {data.title}
                 </h1>
             </div>
+            <div className={"flex flex-col"}>
+                    {
+                        <div>
+                            <MDXRemote source={data.contents}/>
+                        </div>
+                    }
+                </div>
         </div>
     )
 }

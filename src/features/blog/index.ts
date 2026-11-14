@@ -39,3 +39,4 @@ export class BlogPost {
 }
 
 export const BLOG_DIR_PATH = path.join(process.cwd(), "blog")
+
