@@ -1,4 +1,4 @@
-import {BlogPost} from "@/features/blog";
+import {BlogPost} from "@/features";
 import clsx from "clsx";
 import Image from "next/image";
 

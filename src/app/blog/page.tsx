@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import {BLOG_DIR_PATH, BlogPost} from "@/features/blog";
+import {BLOG_DIR_PATH, BlogPost} from "@/features";
 import BlogEntry from "@/components/BlogEntry";
 import * as fs from "node:fs";
 import path from "node:path";
@@ -14,8 +14,7 @@ const testPost = new BlogPost({
 });
 
 const posts = fs.readdirSync(BLOG_DIR_PATH).map((filename: string) => BlogPost.from(JSON.parse(fs.readFileSync(path.join(BLOG_DIR_PATH, filename)).toString())));
-console.log(posts)
-console.log(testPost.serialize())
+
 export default function Blog() {
     return (
         <div className={"flex flex-col items-center min-h-full"}>

@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar";
 import * as fs from "node:fs";
 import path from "node:path";
-import {BlogPost} from "@/features/blog";
+import {BlogPost} from "@/features";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 
 
